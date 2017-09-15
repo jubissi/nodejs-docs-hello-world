@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "node index.js",
-	"test": "make test"
+	       "test": "make test"
     },
     "devDependencies": {
         "mocha": "*",

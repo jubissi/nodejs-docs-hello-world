@@ -1,8 +1,9 @@
+process.env.PORT = '3000';
 var server = require('../index');
 
 describe('server', function () {
   before(function () {
-    server.listen(1337);
+    server.listen(3000);
   });
 
   after(function () {
@@ -15,14 +16,14 @@ var assert = require('assert'),
 
 describe('/', function () {
   it('should return 200', function (done) {
-    http.get('http://localhost:1337', function (response) {
+    http.get('http://localhost:3000', function (response) {
       assert.equal(200, response.statusCode);
       done();
     });
   });
 
   it('should say Hello World in node.js', function (done) {
-    http.get('http://localhost:1337', function (response) {
+    http.get('http://localhost:3000', function (response) {
       var data = '';
 
       response.on('data', function (chunk) {
